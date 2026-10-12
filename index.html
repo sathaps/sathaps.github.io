@@ -5,41 +5,43 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Sathappan Alagusundaram, systems architect building intelligent, connected systems from the device to the cloud.">
 <meta property="og:title" content="Sathappan Alagusundaram">
-<meta property="og:description" content="Intelligent systems, from the device to the cloud.">
 <meta property="og:image" content="https://sathaps.github.io/image.jpg">
+<meta property="og:description" content="Intelligent systems, from the device to the cloud.">
 <title>Sathappan Alagusundaram</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2064%2064%27%3E%3Crect%20width%3D%2764%27%20height%3D%2764%27%20rx%3D%2712%27%20fill%3D%27%230B5C6B%27/%3E%3Ctext%20x%3D%2732%27%20y%3D%2743%27%20font-family%3D%27Arial%2CHelvetica%2Csans-serif%27%20font-size%3D%2730%27%20font-weight%3D%27700%27%20fill%3D%27%23ffffff%27%20text-anchor%3D%27middle%27%3ESA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
+/* Layout: one left-aligned reading column; hero pairs the name with an equipment-style nameplate; sections are plain, ruled, unboxed. */
 :root{
-  --bg:#f5f7f8; --surface:#ffffff; --fg:#14202a; --muted:#56656f; --rule:#d5dde2;
-  --accent:#0b5c6b; --accent-ink:#ffffff; --plate:#e8eef1;
-  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
-  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+--bg:#f5f7f8; --surface:#ffffff; --fg:#14202a; --muted:#56656f; --rule:#d5dde2;
+--accent:#0b5c6b; --accent-ink:#ffffff; --plate:#e8eef1;
+--display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+--body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+--mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0e1418; --surface:#141c21; --fg:#e4eaed; --muted:#97a6ae; --rule:#26323a;
-  --accent:#62b6c6; --accent-ink:#0e1418; --plate:#18232a; color-scheme:dark}}
+--bg:#0e1418; --surface:#141c21; --fg:#e4eaed; --muted:#97a6ae; --rule:#26323a;
+--accent:#62b6c6; --accent-ink:#0e1418; --plate:#18232a; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0e1418; --surface:#141c21; --fg:#e4eaed; --muted:#97a6ae; --rule:#26323a;
-  --accent:#62b6c6; --accent-ink:#0e1418; --plate:#18232a; color-scheme:dark}
-*,*::before,*::after{box-sizing:border-box}
-img{max-width:100%}
+--bg:#0e1418; --surface:#141c21; --fg:#e4eaed; --muted:#97a6ae; --rule:#26323a;
+--accent:#62b6c6; --accent-ink:#0e1418; --plate:#18232a; color-scheme:dark}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
 .wrap{max-width:60rem;margin:0 auto;padding-inline:clamp(1rem,4vw,2.5rem);padding-block:0 4rem}
 a{color:var(--accent);text-underline-offset:.18em;text-decoration-thickness:1px}
 a:hover{text-decoration-thickness:2px}
 a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+/* nav */
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--rule)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.7rem}
 .nav .mark{font-family:var(--display);font-weight:600;font-size:1.15rem;letter-spacing:.02em;color:var(--fg);text-decoration:none}
 .nav ul{display:flex;flex-wrap:wrap;gap:.25rem 1.1rem;list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}
 .nav ul a{color:var(--muted);text-decoration:none}
 .nav ul a:hover{color:var(--fg)}
+/* hero */
 .hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:end;padding-block:clamp(2.5rem,7vw,5rem) clamp(2rem,5vw,3.5rem);border-bottom:1px solid var(--rule)}
 .eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .9rem}
 h1{font-family:var(--display);font-weight:700;font-size:clamp(2.8rem,8vw,5.2rem);line-height:.92;letter-spacing:-.005em;margin:0 0 1.2rem;text-wrap:balance}
@@ -52,28 +54,33 @@ h1 span{display:block;color:var(--accent)}
 .plate dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.45rem 1rem;margin:0}
 .plate dt{color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;padding-top:.1rem}
 .plate dd{margin:0;font-variant-numeric:tabular-nums}
+/* sections */
 section{padding-block:clamp(2.5rem,6vw,4rem) 0}
 .sec-head{display:flex;align-items:baseline;gap:1rem;margin-bottom:1.5rem}
 h2.sec{font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,4vw,2.4rem);line-height:1;margin:0;letter-spacing:.005em}
 .sec-head .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .prose{max-width:40rem}
 .prose p{margin:0 0 1.1em}
+/* timeline */
 .timeline{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
 .timeline li{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:1.5rem;padding-block:1.2rem;border-bottom:1px solid var(--rule)}
 .when{font-family:var(--mono);font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:.2rem}
 .role{font-weight:600;margin:0}
 .org{color:var(--muted);margin:0 0 .4rem;font-size:.95rem}
 .timeline p.desc{margin:0;max-width:40rem}
+/* writing */
 .pubs{list-style:none;margin:0;padding:0;display:grid;gap:1.25rem}
 .pub{border-left:2px solid var(--accent);padding-left:1rem}
 .pub .meta{font-family:var(--mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 .25rem}
 .pub .title{font-weight:600;font-size:1.1rem;line-height:1.4;margin:0}
 .pub .note{color:var(--muted);margin:.3rem 0 0;font-size:.95rem}
 .pending{border-left-color:var(--rule)}
+/* recognition */
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:0 2rem;margin:0;padding:0;list-style:none}
 .facts li{padding-block:.9rem;border-top:1px solid var(--rule)}
 .facts strong{display:block;font-weight:600}
 .facts span{color:var(--muted);font-size:.95rem}
+/* media kit */
 .kit{display:grid;gap:1.25rem}
 .bio{background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:1.1rem 1.2rem}
 .bio-top{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-bottom:.6rem}
@@ -83,6 +90,7 @@ h2.sec{font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,4vw,2.4
 .copy:hover{background:var(--accent);color:var(--accent-ink)}
 .topics{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:.25rem 0 0;padding:0}
 .topics li{font-size:.92rem;border:1px solid var(--rule);border-radius:999px;padding:.25rem .8rem;background:var(--surface)}
+/* contact */
 .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1rem 2rem;margin:0}
 .contact div{border-top:1px solid var(--rule);padding-top:.8rem}
 .contact dt{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
@@ -92,6 +100,7 @@ h2.sec{font-family:var(--display);font-weight:600;font-size:clamp(1.8rem,4vw,2.4
 .skip:focus{top:calc(env(safe-area-inset-top,0px) + .5rem)}
 footer a{color:var(--muted)}
 footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--rule);font-family:var(--mono);font-size:.75rem;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
+/* hero actions + portrait */
 .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.6rem}
 .btn{display:inline-block;font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:.65rem 1rem;border-radius:3px;border:1px solid var(--accent)}
 .btn.primary{background:var(--accent);color:var(--accent-ink)}
@@ -100,10 +109,13 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--rule);font-
 .btn.ghost:hover{background:var(--plate)}
 .thesis{font-family:var(--display);font-weight:600;font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.12;margin:0 0 1rem;max-width:32rem;text-wrap:balance}
 .who{display:flex;align-items:center;gap:.9rem;margin:0 0 1rem;padding-bottom:1rem;border-bottom:1px dashed var(--rule)}
-.portrait{flex:none;width:6.5rem;height:6.5rem;border-radius:50%;background:var(--bg);border:2px solid var(--accent);overflow:hidden}
+.portrait{flex:none;width:4.25rem;height:4.25rem;border-radius:50%;background:var(--bg);border:1px solid var(--rule);display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:1.5rem;color:var(--accent);overflow:hidden}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait{width:6.5rem;height:6.5rem;border:2px solid var(--accent);display:block}
 .portrait img{width:100%;height:100%;object-fit:cover;display:block}
-.who p{margin:0;font-family:var(--body);font-size:1rem;line-height:1.4}
+.who p{font-size:1rem;margin:0;font-family:var(--body);font-size:.9rem;line-height:1.4}
 .who small{display:block;color:var(--muted);font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;margin-top:.2rem}
+/* signal path */
 .path{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:clamp(2rem,5vw,3rem);border:1px solid var(--rule);border-radius:4px;background:var(--surface)}
 .stage{padding:1.1rem 1.2rem 1.2rem;position:relative;min-width:0}
 .stage + .stage{border-left:1px solid var(--rule)}
@@ -111,221 +123,219 @@ footer{margin-top:4rem;padding-top:1.2rem;border-top:1px solid var(--rule);font-
 .stage .k{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0}
 .stage h3{font-family:var(--display);font-weight:600;font-size:1.5rem;line-height:1.1;margin:.2rem 0 .4rem}
 .stage p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.5}
+.path-cap{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.04em;margin:.6rem 0 0}
+/* now + questions */
+.now{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.25rem 2.5rem}
+.now h3{font-family:var(--mono);font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 .5rem}
+.now ul{margin:0;padding-left:1.1rem}
+.now li{margin-bottom:.45rem}
 @media (max-width:44rem){
-  .path{grid-template-columns:1fr}
-  .stage + .stage{border-left:0;border-top:1px solid var(--rule)}
-  .stage + .stage::before{left:1.3rem;top:-.42rem;transform:rotate(135deg)}
-  .hero{grid-template-columns:1fr;align-items:start}
-  .timeline li{grid-template-columns:1fr;gap:.3rem}
-  .nav ul{display:none}
+.path{grid-template-columns:1fr}
+.stage + .stage{border-left:0;border-top:1px solid var(--rule)}
+.stage + .stage::before{left:1.3rem;top:-.42rem;transform:rotate(135deg)}
+.hero{grid-template-columns:1fr;align-items:start}
+.timeline li{grid-template-columns:1fr;gap:.3rem}
+.nav ul{display:none}
 }
 </style>
+<style>body{margin:0}*,*::before,*::after{box-sizing:border-box}img{max-width:100%}</style>
 </head>
 <body>
 <a class="skip" href="#top">Skip to content</a>
 <nav class="nav" aria-label="Sections">
-  <div class="wrap">
-    <a class="mark" href="#top">Sathappan Alagusundaram</a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#writing">Writing</a></li>
-      <li><a href="#media">Press</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
+<div class="wrap">
+<a class="mark" href="#top">Sathappan Alagusundaram</a>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#writing">Writing</a></li>
+<li><a href="#media">Press</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
 </nav>
-
 <main class="wrap" id="top">
-  <header class="hero">
-    <div>
-      <p class="eyebrow">Systems architect · Sugar Land, Texas</p>
-      <h1>Sathappan <span>Alagusundaram</span></h1>
-      <p class="thesis">Intelligent systems, from the device to the cloud.</p>
-      <p class="lede">I architect and lead connected systems that span devices, edge platforms and the cloud, across energy, test and measurement, and manufacturing. I've taken platforms from hardware selection to global release, and built software that moves across processor families without being rewritten. Now I'm bringing AI into those systems, so fleets in the field can spot problems and support decisions where they happen.</p>
-      <div class="actions">
-        <a class="btn primary" href="#contact">Get in touch</a>
-        <a class="btn ghost" href="#writing">Read my writing</a>
-      </div>
-    </div>
-    <aside class="plate" aria-label="Summary">
-      <h2>Nameplate</h2>
-      <div class="who">
-        <div class="portrait"><img src="image.jpg" alt="Sathappan Alagusundaram" width="260" height="260"></div>
-        <p>Sathappan Alagusundaram<small>Systems architect</small></p>
-      </div>
-      <dl>
-        <dt>Role</dt><dd>Systems Architect &amp; Software Team Lead, SLB</dd>
-        <dt>Field</dt><dd>Connected systems · Industrial IoT · Edge AI</dd>
-        <dt>Experience</dt><dd>20 years</dd>
-        <dt>Sites</dt><dd>India · Singapore · USA</dd>
-        <dt>Industries</dt><dd>Energy · Test &amp; measurement · Semiconductor factory automation · Multifunction printers</dd>
-        <dt>Member</dt><dd>IEEE Senior Member</dd>
-      </dl>
-    </aside>
-  </header>
-
-  <div class="path" role="list" aria-label="Where my work sits">
-    <div class="stage" role="listitem">
-      <p class="k">Sense</p>
-      <h3>Instruments &amp; machines</h3>
-      <p>Gamma and microwave flow measurement, pump telemetry, the acquisition boards that read them.</p>
-    </div>
-    <div class="stage" role="listitem">
-      <p class="k">Connect</p>
-      <h3>Edge &amp; cloud platforms</h3>
-      <p>Containers that move across ARM64 and x64, operator interfaces, cloud remote monitoring for global fleets.</p>
-    </div>
-    <div class="stage" role="listitem">
-      <p class="k">Reason</p>
-      <h3>On-device intelligence</h3>
-      <p>Anomaly detection and language models that run on the device and still work when the cloud is out of reach.</p>
-    </div>
-  </div>
-
-  <section id="about" aria-labelledby="about-h">
-    <div class="sec-head"><h2 class="sec" id="about-h">About</h2></div>
-    <div class="prose">
-      <p>I have spent twenty years building systems where software meets hardware. I started on multifunction printer software and semiconductor factory automation in Bangalore, moved to Singapore to build embedded software for Rohde &amp; Schwarz handheld spectrum analyzers, and joined SLB in 2015.</p>
-      <p>At SLB I led the software architecture for a new generation of flow computers for the VxSpectra multiphase flow meter. We moved the software into containers so it could follow the product across processor families instead of being rewritten for each one. Each later hardware migration took weeks rather than months. I also brought augmented reality into our Singapore engineering center, which we used for remote client inspections of equipment.</p>
-      <p>Since 2024 I have led control software for hydraulic fracturing pump fleets in Sugar Land. Alongside that work, I am testing how well small language models answer questions from real equipment manuals on hardware with no network. I write about what I learn in trade publications and IEEE venues, and review papers for IEEE and Elsevier journals.</p>
-    </div>
-  </section>
-
-  <section id="experience" aria-labelledby="exp-h">
-    <div class="sec-head"><h2 class="sec" id="exp-h">Experience</h2><span class="tag">Most recent first</span></div>
-    <ol class="timeline">
-      <li>
-        <span class="when">2024 – present</span>
-        <div>
-          <p class="role">Software Team Lead, Senior Software Engineer III</p>
-          <p class="org">SLB · Well Services, Sugar Land, Texas</p>
-          <p class="desc">Control software for hydraulic fracturing pump fleets: automated rate and pressure control for 60+ high-pressure pumps with sub-100 ms response, including simultaneous operation of two frac fleets from one control system.</p>
-        </div>
-      </li>
-      <li>
-        <span class="when">2019 – 2024</span>
-        <div>
-          <p class="role">Systems Architect &amp; Team Lead</p>
-          <p class="org">SLB · Flow computers and IoT edge platform, Singapore</p>
-          <p class="desc">Led the platform selection and containerized software architecture for the VxSpectra flow computers, commercially released in 2022, and the software for the VxWave microwave multiphase flow meter. Led teams across Singapore, Pune and Houston. Introduced HoloLens-based AR for remote equipment inspection.</p>
-        </div>
-      </li>
-      <li>
-        <span class="when">2015 – 2019</span>
-        <div>
-          <p class="role">Software &amp; Electrical Lead</p>
-          <p class="org">SLB · VxSpectra multiphase flow meter, Singapore</p>
-          <p class="desc">Board bring-up, embedded Linux, device drivers and operator interfaces for new product development and sustaining.</p>
-        </div>
-      </li>
-      <li>
-        <span class="when">2011 – 2015</span>
-        <div>
-          <p class="role">Software Development Engineer</p>
-          <p class="org">Rohde &amp; Schwarz · Spectrum analyzers, Singapore</p>
-          <p class="desc">Board support packages, drivers and signal acquisition for the R&amp;S FPH/FSH handheld spectrum analyzers and interference analyzers. Traced a pre-release system hang to a processor AXI bus erratum, avoiding a launch delay.</p>
-        </div>
-      </li>
-      <li>
-        <span class="when">2007 – 2011</span>
-        <div>
-          <p class="role">Software Engineer</p>
-          <p class="org">Novellus Systems (now Lam Research) and Toshiba · Bangalore</p>
-          <p class="desc">Semiconductor factory automation software; protocol layers and remote applications for multifunction printers.</p>
-        </div>
-      </li>
-    </ol>
-  </section>
-
-  <section id="writing" aria-labelledby="writing-h">
-    <div class="sec-head"><h2 class="sec" id="writing-h">Writing</h2></div>
-    <ul class="pubs">
-      <li class="pub">
-        <p class="meta">Automation World · September 2026</p>
-        <p class="title"><a href="https://www.automationworld.com/factory/digital-transformation/article/55407315/why-industrial-augmented-reality-pilots-failed-to-scale-and-what-has-changed" target="_blank" rel="noopener">Why Industrial Augmented Reality Pilots Failed To Scale, and What Has Changed</a></p>
-        <p class="note">Why AR pilots in plants stalled after the first asset, and how vision models and scene capture change the cost of the second one.</p>
-      </li>
-      <li class="pub pending">
-        <p class="meta">IEEE journals and magazines · in review</p>
-        <p class="title">Papers on industrial edge architecture, alarm management and on-device machine learning</p>
-        <p class="note">Listed here as they are published.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section id="recognition" aria-labelledby="rec-h">
-    <div class="sec-head"><h2 class="sec" id="rec-h">Recognition &amp; service</h2></div>
-    <ul class="facts">
-      <li><strong>IEEE Senior Member</strong><span>Institute of Electrical and Electronics Engineers</span></li>
-      <li><strong>Peer reviewer</strong><span>IEEE and Elsevier journals; Manning Publications</span></li>
-      <li><strong>Best CI Project Award, 2020</strong><span>SLB · AR-assisted remote client inspection</span></li>
-      <li><strong>SWTC Award</strong><span>SLB Singapore technology center</span></li>
-    </ul>
-  </section>
-
-  <section id="media" aria-labelledby="media-h">
-    <div class="sec-head"><h2 class="sec" id="media-h">Press</h2><span class="tag">Bios and topics for editors and podcast hosts</span></div>
-    <div class="kit">
-      <div class="bio">
-        <div class="bio-top"><h3>Short bio · 54 words</h3><button class="copy" type="button" data-target="bio-short">Copy</button></div>
-        <p id="bio-short">Sathappan Alagusundaram is a systems architect at SLB in Sugar Land, Texas, with twenty years building connected industrial systems across India, Singapore and the United States. He designs intelligent systems that span devices, edge platforms and the cloud, with a current focus on bringing AI to industrial fleets. He is an IEEE Senior Member.</p>
-      </div>
-      <div class="bio">
-        <div class="bio-top"><h3>Long bio · 111 words</h3><button class="copy" type="button" data-target="bio-long">Copy</button></div>
-        <p id="bio-long">Sathappan Alagusundaram is a systems architect and software team lead at SLB in Sugar Land, Texas. Over twenty years he has built connected systems and products at Toshiba, Novellus Systems, Rohde &amp; Schwarz and SLB, in India, Singapore and the United States. At SLB he led the containerized software architecture for the VxSpectra flow computers and introduced augmented reality for remote equipment inspection at the company's Singapore technology center. He now works on control software for hydraulic fracturing pump fleets. He writes for trade and IEEE publications, reviews for IEEE and Elsevier journals, and is an IEEE Senior Member. He holds a B.Tech in electronics and communication engineering from Pondicherry University.</p>
-      </div>
-      <div>
-        <p class="eyebrow" style="margin-bottom:.5rem">Topics I can speak to</p>
-        <ul class="topics">
-          <li>Industrial edge architecture</li>
-          <li>Containers on long-lifecycle devices</li>
-          <li>Silicon end-of-life and requalification</li>
-          <li>Securing industrial devices</li>
-          <li>Machine learning on constrained hardware</li>
-          <li>Industrial AR</li>
-          <li>Operator interfaces</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" aria-labelledby="contact-h">
-    <div class="sec-head"><h2 class="sec" id="contact-h">Contact</h2></div>
-    <dl class="contact">
-      <div><dt>Email</dt><dd>sathaps@gmail.com</dd></div>
-      <div><dt>LinkedIn</dt><dd class="link"><a href="https://www.linkedin.com/in/sathappanalagusundaram" target="_blank" rel="noopener">in/sathappanalagusundaram</a></dd></div>
-      <div><dt>ORCID</dt><dd class="link"><a href="https://orcid.org/0009-0006-0417-6603" target="_blank" rel="noopener">0009-0006-0417-6603</a></dd></div>
-      <div><dt>Web of Science</dt><dd class="link"><a href="https://www.webofscience.com/wos/author/record/PTG-3289-2026" target="_blank" rel="noopener">Reviewer record</a></dd></div>
-      <div><dt>GitHub</dt><dd class="link"><a href="https://github.com/sathaps" target="_blank" rel="noopener">github.com/sathaps</a></dd></div>
-    </dl>
-  </section>
-
-  <footer>
-    <span>© 2026 Sathappan Alagusundaram</span>
-    <span>Personal site. Views are my own, not my employer's.</span>
-    <a href="#top">Back to top</a>
-  </footer>
+<header class="hero">
+<div>
+<p class="eyebrow">Engineering leader &amp; systems architect · Sugar Land, Texas</p>
+<h1>Sathappan <span>Alagusundaram</span></h1>
+<p class="thesis">Intelligent systems, from the device to the cloud.</p>
+<p class="lede">I architect and lead connected systems that span devices, edge platforms and the cloud, across energy, test and measurement, and manufacturing. I've taken platforms from hardware selection to global release, and I’m now bringing AI and GenAI into those industrial systems.</p>
+<div class="actions">
+<a class="btn primary" href="#contact">Get in touch</a>
+<a class="btn ghost" href="#writing">Read my writing</a>
+</div>
+</div>
+<aside class="plate" aria-label="Summary">
+<h2>Nameplate</h2>
+<div class="who">
+<div class="portrait"><img src="image.jpg" alt="Sathappan Alagusundaram" width="260" height="260"></div>
+<p>Sathappan Alagusundaram<small>Systems architect</small></p>
+</div>
+<dl>
+<dt>Role</dt><dd>Systems Architect &amp; Software Team Lead, SLB</dd>
+<dt>Field</dt><dd>Software platforms · Industrial IoT · AI/ML · GenAI</dd>
+<dt>Experience</dt><dd>20 years</dd>
+<dt>Sites</dt><dd>USA · Singapore · India</dd>
+<dt>Industries</dt><dd>Energy · Test &amp; measurement · Semiconductor factory automation · Multifunction printers</dd>
+<dt>Member</dt><dd>IEEE Senior Member</dd>
+</dl>
+</aside>
+</header>
+<div class="path" role="list" aria-label="Where my work sits">
+<div class="stage" role="listitem">
+<p class="k">Sense</p>
+<h3>Instruments &amp; machines</h3>
+<p>Gamma and microwave flow measurement, pump telemetry, the acquisition boards that read them.</p>
+</div>
+<div class="stage" role="listitem">
+<p class="k">Connect</p>
+<h3>Edge &amp; cloud platforms</h3>
+<p>Containerized edge platforms, operator interfaces and cloud remote monitoring for global fleets.</p>
+</div>
+<div class="stage" role="listitem">
+<p class="k">Reason</p>
+<h3>On-device intelligence</h3>
+<p>Predictive maintenance and GenAI for industrial equipment.</p>
+</div>
+</div>
+<section id="about" aria-labelledby="about-h">
+<div class="sec-head"><h2 class="sec" id="about-h">About</h2></div>
+<div class="prose">
+<p>I have spent twenty years building systems where software meets hardware. I started on multifunction printer software and semiconductor factory automation in Bangalore, moved to Singapore to build embedded software for Rohde &amp; Schwarz handheld spectrum analyzers, and joined SLB in 2015.</p>
+<p>At SLB I led the architecture for a new generation of flow computers for the VxSpectra multiphase flow meter, from a hardware evaluation across 17+ vendors to a containerized microservices platform, released commercially in 2022, that cut cross-platform integration time by 75%. I also led the VxWave microwave flow meter software and brought augmented reality into our Singapore engineering center for remote client inspections.</p>
+<p>Since 2024 I have led control software for hydraulic fracturing pump fleets in Sugar Land, including running two frac fleets from one control system, and prototyped GenAI predictive maintenance and intelligent pump control for them. Outside the day job I'm testing how well small language models answer questions from real equipment manuals on hardware with no network. I write for trade publications, have papers under review at IEEE and SPE journals, and review for IEEE and Elsevier journals.</p>
+</div>
+</section>
+<section id="experience" aria-labelledby="exp-h">
+<div class="sec-head"><h2 class="sec" id="exp-h">Experience</h2><span class="tag">Most recent first</span></div>
+<ol class="timeline">
+<li>
+<span class="when">2024 – present</span>
+<div>
+<p class="role">Software Team Lead, Senior Software Engineer III</p>
+<p class="org">SLB · Well Services, Sugar Land, Texas</p>
+<p class="desc">Control software for hydraulic fracturing pump fleets: automated rate and pressure control for 60+ high-pressure pumps with sub-100 ms response, including simultaneous operation of two frac fleets from one control system. Delivery lead for the Dual Frac software deployed for YPF. Prototyped GenAI predictive maintenance and intelligent pump control.</p>
+</div>
+</li>
+<li>
+<span class="when">2019 – 2024</span>
+<div>
+<p class="role">Systems Architect &amp; Team Lead</p>
+<p class="org">SLB · Flow computers and IoT edge platform, Singapore</p>
+<p class="desc">Led the platform selection and containerized software architecture for the VxSpectra flow computers, commercially released in 2022, and the software for the VxWave microwave multiphase flow meter. Led teams across Singapore, Pune and Houston. Proposed and led commercialization of IoT flow computers with Azure IoT Hub cloud monitoring. Introduced HoloLens-based AR for remote equipment inspection (PPCS-SWTC Best CI Project Award, 2020).</p>
+</div>
+</li>
+<li>
+<span class="when">2015 – 2019</span>
+<div>
+<p class="role">Software &amp; Electrical Lead</p>
+<p class="org">SLB · VxSpectra multiphase flow meter, Singapore</p>
+<p class="desc">Board bring-up, embedded Linux, device drivers and operator interfaces for new product development and sustaining. Led VxSpectra software releases 2016–2018 and the VxAdvisor release. VxSpectra MK4 production task force (SWTC Excellence Award, 2017).</p>
+</div>
+</li>
+<li>
+<span class="when">2011 – 2015</span>
+<div>
+<p class="role">Software Development Engineer</p>
+<p class="org">Rohde &amp; Schwarz · Spectrum analyzers, Singapore</p>
+<p class="desc">Board support packages, drivers and signal acquisition for the R&amp;S FPH/FSH handheld spectrum analyzers and interference analyzers. Traced a pre-release system hang to a processor AXI bus erratum, avoiding a launch delay.</p>
+</div>
+</li>
+<li>
+<span class="when">2007 – 2011</span>
+<div>
+<p class="role">Software Engineer</p>
+<p class="org">Novellus Systems (now Lam Research) and Toshiba · Bangalore</p>
+<p class="desc">Semiconductor factory automation software; protocol layers and remote applications for multifunction printers.</p>
+</div>
+</li>
+</ol>
+</section>
+<section id="writing" aria-labelledby="writing-h">
+<div class="sec-head"><h2 class="sec" id="writing-h">Writing</h2></div>
+<ul class="pubs">
+<li class="pub">
+<p class="meta">Automation World · September 2026</p>
+<p class="title"><a href="https://www.automationworld.com/factory/digital-transformation/article/55407315/why-industrial-augmented-reality-pilots-failed-to-scale-and-what-has-changed" target="_blank" rel="noopener">Why Industrial Augmented Reality Pilots Failed To Scale, and What Has Changed</a></p>
+<p class="note">Why AR pilots in plants stalled after the first asset, and how vision models and scene capture change the cost of the second one.</p>
+</li>
+<li class="pub pending">
+<p class="meta">IEEE and SPE journals and magazines · under review</p>
+<p class="title">Containerized industrial edge platforms · Simultaneous hydraulic fracturing control · Fleet-wide alarm learning · Machine learning on constrained edge hardware · Secure immutable edge devices · Industrial augmented reality · One operator interface for a product family</p>
+<p class="note">Titles listed here as they are published.</p>
+</li>
+</ul>
+</section>
+<section id="recognition" aria-labelledby="rec-h">
+<div class="sec-head"><h2 class="sec" id="rec-h">Recognition</h2></div>
+<ul class="facts">
+<li><strong>IEEE Senior Member</strong><span>Institute of Electrical and Electronics Engineers</span></li>
+<li><strong>Peer reviewer</strong><span>IEEE Internet of Things Journal, IEEE Transactions on Industrial Electronics, IEEE Transactions on Mobile Computing, Elsevier journals, Manning Publications</span></li>
+<li><strong>PPCS-SWTC Best CI Project Award, 2020</strong><span>SLB · AR-assisted remote client inspection</span></li>
+<li><strong>SWTC Excellence Award, 2017</strong><span>SLB · VxSpectra MK4 production task force</span></li>
+</ul>
+</section>
+<section id="media" aria-labelledby="media-h">
+<div class="sec-head"><h2 class="sec" id="media-h">Press</h2><span class="tag">Bios and topics for editors and podcast hosts</span></div>
+<div class="kit">
+<div class="bio">
+<div class="bio-top"><h3>Short bio · 57 words</h3><button class="copy" type="button" data-target="bio-short">Copy</button></div>
+<p id="bio-short">Sathappan Alagusundaram is an engineering leader and systems architect at SLB in Sugar Land, Texas, with twenty years building software platforms that span devices, edge and the cloud across the United States, Singapore and India. His current focus is bringing AI, from predictive maintenance to on-device language models, into industrial systems. He is an IEEE Senior Member.</p>
+</div>
+<div class="bio">
+<div class="bio-top"><h3>Long bio · 122 words</h3><button class="copy" type="button" data-target="bio-long">Copy</button></div>
+<p id="bio-long">Sathappan Alagusundaram is an engineering leader and systems architect at SLB in Sugar Land, Texas. Over twenty years he has built software platforms and products at Toshiba, Novellus Systems, Rohde &amp; Schwarz and SLB, in India, Singapore and the United States. At SLB he led the containerized platform architecture for the VxSpectra flow computers and introduced augmented reality for remote equipment inspection at the company's Singapore technology center. He now leads control software for hydraulic fracturing pump fleets, including GenAI predictive maintenance. He has written for Automation World, has papers under review at IEEE and SPE journals, reviews for IEEE and Elsevier journals, and is an IEEE Senior Member. He holds a B.Tech in electronics and communication engineering from Puducherry Technological University.</p>
+</div>
+<div>
+<p class="eyebrow" style="margin-bottom:.5rem">Topics I can speak to</p>
+<ul class="topics">
+<li>GenAI for industrial operations</li>
+<li>Industrial edge architecture</li>
+<li>Containers on long-lifecycle devices</li>
+<li>Silicon end-of-life and requalification</li>
+<li>Securing industrial devices</li>
+<li>Machine learning on constrained hardware</li>
+<li>Industrial AR</li>
+<li>Operator interfaces</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="contact" aria-labelledby="contact-h">
+<div class="sec-head"><h2 class="sec" id="contact-h">Contact</h2></div>
+<dl class="contact">
+<div><dt>Email</dt><dd>sathaps@gmail.com</dd></div>
+<div><dt>LinkedIn</dt><dd class="link"><a href="https://www.linkedin.com/in/sathappanalagusundaram" target="_blank" rel="noopener">in/sathappanalagusundaram</a></dd></div>
+<div><dt>ORCID</dt><dd class="link"><a href="https://orcid.org/0009-0006-0417-6603" target="_blank" rel="noopener">0009-0006-0417-6603</a></dd></div>
+<div><dt>Web of Science</dt><dd class="link"><a href="https://www.webofscience.com/wos/author/record/PTG-3289-2026" target="_blank" rel="noopener">Reviewer record</a></dd></div>
+<div><dt>GitHub</dt><dd class="link"><a href="https://github.com/sathaps" target="_blank" rel="noopener">github.com/sathaps</a></dd></div>
+</dl>
+</section>
+<footer>
+<span>© 2026 Sathappan Alagusundaram</span>
+<span>Personal site. Views are my own, not my employer's.</span>
+<a href="#top">Back to top</a>
+</footer>
 </main>
-
 <script>
 document.querySelectorAll('.copy').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    var el = document.getElementById(btn.dataset.target);
-    var text = el.textContent.trim();
-    var done = function(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1600); };
-    var fallback = function(){
-      var r = document.createRange(); r.selectNodeContents(el);
-      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-      btn.textContent = 'Selected';
-      setTimeout(function(){ btn.textContent = 'Copy'; }, 1600);
-    };
-    try {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(done, fallback);
-      } else { fallback(); }
-    } catch (e) { fallback(); }
-  });
+btn.addEventListener('click', function(){
+var el = document.getElementById(btn.dataset.target);
+var text = el.textContent.trim();
+var done = function(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy'; }, 1600); };
+var fallback = function(){
+var r = document.createRange(); r.selectNodeContents(el);
+var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+btn.textContent = 'Selected';
+setTimeout(function(){ btn.textContent = 'Copy'; }, 1600);
+};
+try {
+if (navigator.clipboard && navigator.clipboard.writeText) {
+navigator.clipboard.writeText(text).then(done, fallback);
+} else { fallback(); }
+} catch (e) { fallback(); }
+});
 });
 </script>
 </body>
